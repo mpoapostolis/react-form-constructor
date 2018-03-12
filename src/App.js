@@ -5,10 +5,13 @@ import FormConstructor from './components/FormConstructor';
 import {schema} from './schemas';
 
 class App extends Component {
-  saveItem = obj => this.setState(obj);
+  state = {
+    formData: {},
+  };
+  saveItem = obj => this.setState({formData: obj});
 
   render() {
-    console.log(this.state)
+    console.log(this.state.formData);
     return (
       <div className="App">
         <header className="App-header">
